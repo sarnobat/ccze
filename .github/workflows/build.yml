@@ -1,2 +1,36 @@
 # see
 # https://github.com/sarnobat/github_workflow_action_tutorial.c/blob/main/.github/workflows/cmake-multi-platform.yml
+
+name: Build
+
+on:
+  push:
+    branches: [ master ] # Or your main branch name
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Or a specific OS if needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up dependencies (if any)
+        # Example: Install required packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make gcc # Example: Install make and gcc
+
+      - name: Build with Make
+        run: make -j$(nproc) # -j$(nproc) for parallel builds
+
+      - name: Run tests (optional)
+        run: make test
+
+      - name: Upload artifacts (optional)
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: path/to/your/artifacts # Replace with actual path
