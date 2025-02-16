@@ -5,7 +5,8 @@ LIBS		= -lpcre -lncurses  -l:libc.a
 But how can I do this on Windows? (on Mac, you can't)
 Also the apt update is linux specific.
 
-###
+### Original
+```
 This is CCZE, a fast log colorizer written in C, intended to be a
 drop-in replacement for colorize (http://colorize.raszi.hu).
 
@@ -17,3 +18,4 @@ configuration. Type "man ccze" in the shell prompt.
 
 Please visit the official CCZE web page for more information. The URL
 is http://bonehunter.rulez.org/CCZE.html.
+```
