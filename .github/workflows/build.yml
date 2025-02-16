@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Or a specific OS if needed
+    runs-on: ubuntu-12.04 # Or a specific OS if needed
 
     steps:
       - name: Checkout code
@@ -24,7 +24,9 @@ jobs:
           sudo apt-get install -y make gcc # Example: Install make and gcc
 
       - name: Build with Make
-        run: make -j$(nproc) # -j$(nproc) for parallel builds
+        run: |
+          ./configure
+          make -j$(nproc) # -j$(nproc) for parallel builds
 
       - name: Run tests (optional)
         run: make test
