@@ -28,11 +28,8 @@ jobs:
           ./configure
           make -j$(nproc) # -j$(nproc) for parallel builds
 
-      - name: Run tests (optional)
-        run: make test
-
       - name: Upload artifacts (optional)
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: path/to/your/artifacts # Replace with actual path
+          path: src/ccze # Replace with actual path
