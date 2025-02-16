@@ -39,4 +39,3 @@ jobs:
         with:
           files: |
             ${{ matrix.binary }}
-          tag_name:  ${{ steps.tag.outputs.tag }}
