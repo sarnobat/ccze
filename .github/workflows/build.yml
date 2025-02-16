@@ -33,3 +33,10 @@ jobs:
         with:
           name: build-artifacts
           path: src/ccze # Replace with actual path
+    
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            ${{ matrix.binary }}
+          tag_name:  ${{ steps.tag.outputs.tag }}
