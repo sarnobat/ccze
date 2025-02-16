@@ -5,9 +5,9 @@ name: Build
 
 on:
   push:
-    branches: [ master ] # Or your main branch name
+    branches: [ master, actionBuild ] # Or your main branch name
   pull_request:
-    branches: [ master ]
+    branches: [ master, actionBuild ]
 
 jobs:
   build:
