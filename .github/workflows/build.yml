@@ -94,6 +94,7 @@ jobs:
         run: |
           ./configure
           make -j$(nproc) # -j$(nproc) for parallel builds
+          cp src/ccze ${{ matrix.binary }}
 
       - name: Tag the repository
         shell: bash
