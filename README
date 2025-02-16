@@ -1,3 +1,11 @@
+For static linking, add libc.a to the src/ dir, then edit src/Makefile (not ./Makefile):
+```
+LIBS		= -lpcre -lncurses  -l:libc.a
+```
+But how can I do this on Windows? (on Mac, you can't)
+Also the apt update is linux specific.
+
+###
 This is CCZE, a fast log colorizer written in C, intended to be a
 drop-in replacement for colorize (http://colorize.raszi.hu).
 
