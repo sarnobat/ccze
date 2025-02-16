@@ -53,7 +53,7 @@ jobs:
             c_compiler: gcc
             cpp_compiler: g++
             suffix: linux
-            binary: ./build/hello2.Linux
+            binary: ./src/ccze.linux
           - os: ubuntu-latest
             c_compiler: clang
             cpp_compiler: clang++
