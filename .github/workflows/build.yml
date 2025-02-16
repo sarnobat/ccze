@@ -21,7 +21,7 @@ jobs:
         # Example: Install required packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y make gcc libpcre3 # Example: Install make and gcc
+          sudo apt-get install -y make gcc libncurses-dev libpcre3 libpcre3-dev
 
       - name: Build with Make
         run: |
